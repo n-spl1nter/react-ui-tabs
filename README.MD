@@ -30,6 +30,7 @@ const YourComponent = () => {
 
 Option | Component | Type | Description | Required 
 :---: | :---: | :---: | :---: | :---:
-`defaultActiveTabIndex` | *Tabs* | *Number* | Initial active tab number | *No*
-`tabName` | *Tab* | *String* | Text displayed at tab | *Yes*
+`defaultActiveTabIndex` | *Tabs* | *Number* | Initial active tab number. | *No*
+`onTabChange` | *Tabs* | *Function* | Tab change handler. Accept active tab number. | *No*
+`tabName` | *Tab* | *String* | Text displayed at tab. | *Yes*
 `tabClassName` | *Tab* | *String* | Additional className for tab item. | *No*

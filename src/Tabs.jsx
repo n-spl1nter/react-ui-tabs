@@ -10,6 +10,12 @@ class Tabs extends Component {
         };
     }
 
+    componentDidUpdate(prevProps, prevState){
+        if(prevState.activeTabIndex !== this.state.activeTabIndex){
+            this.props.onTabChange(this.state.activeTabIndex);
+        }
+    }
+
     shouldComponentUpdate(nextProps, nextState){
         return this.state.activeTabIndex !== nextState.activeTabIndex;
     }
@@ -53,11 +59,13 @@ class Tabs extends Component {
 }
 
 Tabs.propTypes = {
-    defaultActiveTabIndex: PropTypes.number
+    defaultActiveTabIndex: PropTypes.number,
+    onTabChange: PropTypes.func
 };
 
 Tabs.defaultProps = {
-    defaultActiveTabIndex: 0
+    defaultActiveTabIndex: 0,
+    onTabChange: tabNumber => {}
 };
 
 export default Tabs;
