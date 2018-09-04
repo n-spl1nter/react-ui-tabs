@@ -20,6 +20,10 @@
   ],
   "author": "Alexey Rodin <alexeyrodin@live.ru>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:n-spl1nter/react-ui-tabs.git"
+  },
   "peerDependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
